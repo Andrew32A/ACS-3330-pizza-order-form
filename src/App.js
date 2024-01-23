@@ -9,67 +9,61 @@ function PizzaForm() {
   const [onions, setOnions] = useState(false);
 
   return (
-    <div>
-      <h1>Pizza Order</h1>
-      <form>
-        <div>
-          <label>
+    <div className="container">
+      <div className="form-container">
+        <h1>Pizza Order</h1>
+        <form>
+          <div>
             <input
               type="text"
               value={name}
               placeholder="name"
               onChange={(e) => setName(e.target.value)}
             />
-          </label>
-        </div>
-        <div>
-          <label>
+          </div>
+          <div>
             <input
               type="checkbox"
               checked={pepperoni}
               onChange={() => setPepperoni(!pepperoni)}
             />
             Pepperoni
-          </label>
-        </div>
-        <div>
-          <label>
+          </div>
+          <div>
             <input
               type="checkbox"
               checked={sausage}
               onChange={() => setSausage(!sausage)}
             />
             Sausage
-          </label>
-        </div>
-        <div>
-          <label>
+          </div>
+          <div>
             <input
               type="checkbox"
               checked={peppers}
               onChange={() => setPeppers(!peppers)}
             />
             Peppers
-          </label>
-        </div>
-        <div>
-          <label>
+          </div>
+          <div>
             <input
               type="checkbox"
               checked={onions}
               onChange={() => setOnions(!onions)}
             />
             Onions
-          </label>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <h2>Your Order</h2>
-      <p>{name}</p>
-      {pepperoni && <p>Pepperoni</p>}
-      {sausage && <p>Sausage</p>}
-      {peppers && <p>Peppers</p>}
-      {onions && <p>Onions</p>}
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div className="order-summary">
+        <h2>Your Order</h2>
+        {name && <p>{name}</p>}
+        {pepperoni && <p>Pepperoni</p>}
+        {sausage && <p>Sausage</p>}
+        {peppers && <p>Peppers</p>}
+        {onions && <p>Onions</p>}
+      </div>
     </div>
   );
 }

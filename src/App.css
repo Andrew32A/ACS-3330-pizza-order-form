@@ -15,13 +15,22 @@ h2 {
   text-align: center;
 }
 
-form {
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  width: 800px;
+  margin: 0 auto;
+  gap: 2em;
+}
+
+.form-container,
+.order-summary {
+  width: 45%;
   background: #444;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  margin: 0 auto;
 }
 
 input[type="text"] {
@@ -56,12 +65,4 @@ button {
 
 button:hover {
   background: #218838;
-}
-
-.order-summary {
-  margin-top: 20px;
-  background: #444;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
 }
